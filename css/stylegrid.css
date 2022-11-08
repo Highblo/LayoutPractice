@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    "header header header" 150px
+    "nav    main   aside " 1fr
+    "footer footer footer" 300px
+    / 150px 1fr 200px;
+  gap: 10px;
+}
+
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+
+@media(max-width: 768px) {
+  body {
+    grid-template: 
+      "header" 150px
+      "main  " 1fr
+      "nav   "
+      "aside "
+      "footer" 200px;
+  }
+}
